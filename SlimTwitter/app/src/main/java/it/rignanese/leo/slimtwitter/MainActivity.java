@@ -176,6 +176,15 @@ public class MainActivity extends Activity implements AdvancedWebView.Listener {
 
     @Override
     public void onPageFinished(String url) {
+        String promoCSS = "javascript:(function() {" +
+			         "var node = document.createElement('style');" +
+			         "node.type = 'text/css';" +
+			         "node.innerHTML = '[style]>div>div>[data-testid=placementTracking] {" +
+			         "display: none;" +
+			         "}';" +
+			         "document.head.appendChild(node);" +
+			         "}) ()";
+	       webViewTwitter.loadUrl(promoCSS);
     }
 
     @Override
