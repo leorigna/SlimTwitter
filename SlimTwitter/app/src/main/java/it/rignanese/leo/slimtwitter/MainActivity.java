@@ -40,8 +40,8 @@ public class MainActivity extends Activity implements AdvancedWebView.Listener {
         webViewTwitter = findViewById(R.id.webView);
 
         webViewTwitter.setListener(this, this);
-        webViewTwitter.addPermittedHostname("mobile.twitter.com");
-        webViewTwitter.addPermittedHostname("twitter.com");
+        webViewTwitter.addPermittedHostname("mobile.x.com");
+        webViewTwitter.addPermittedHostname("x.com");
 
         //full screen video
         myWebChromeClient = new WebChromeClient() {
@@ -127,7 +127,7 @@ public class MainActivity extends Activity implements AdvancedWebView.Listener {
                 text = sharedSubject;
             }
 
-            Uri.Builder uriBuilder = Uri.parse("https://twitter.com/intent/tweet").buildUpon();
+            Uri.Builder uriBuilder = Uri.parse("https://x.com/intent/tweet").buildUpon();
             if (text != null) {
                 uriBuilder.appendQueryParameter("text", text);
             }
@@ -200,7 +200,8 @@ public class MainActivity extends Activity implements AdvancedWebView.Listener {
 
     @Override
     public void onExternalPageRequest(String url) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+        webViewTwitter.loadUrl(url);
+        //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
     }
 
 

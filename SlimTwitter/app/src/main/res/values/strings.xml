@@ -4,7 +4,7 @@ SlimSocial for Twitter is an Open Source app realized by Leonardo Rignanese
 -->
 <resources>
     <string name="app_name" translatable="false">SlimSocial for Twitter</string>
-    <string name="urlTwitterMobile" translatable="false">https://mobile.twitter.com</string>
+    <string name="urlTwitterMobile" translatable="false">https://mobile.x.com</string>
 
     <!--  !!!  PLEASE TRANSLATE KEEPING THIS FORMAT.  !!!   -->
 
