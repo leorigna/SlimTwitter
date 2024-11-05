@@ -1,15 +1,17 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    namespace "it.rignanese.leo.slimtwitter"
+
+    compileSdk 34
 
     defaultConfig {
         applicationId "it.rignanese.leo.slimtwitter"
         minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 5
-        versionName "3.2"
+        targetSdkVersion 34
+        versionCode 6
+        versionName "3.3"
     }
 
     buildTypes {
@@ -22,8 +24,12 @@ android {
 
     compileOptions {
         encoding = 'UTF-8'
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
     }
 }
 
